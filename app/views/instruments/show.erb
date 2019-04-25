@@ -1,0 +1,8 @@
+<h1>Welcome to <%= @instrument.name %>'s page! </h1>
+<p>Brand: <%= @instrument.brand %> </p>
+
+<p>Artist: <%= @instrument.artists.map {|plays| plays.name}.join(", ") %></p>
+
+<a href="/instruments/<%= @instrument.id %>/edit">Edit <%= @instrument.name %>'s information.</a>
+<br/>
+<a href="/instruments">Back to the list of instruments.</a>
